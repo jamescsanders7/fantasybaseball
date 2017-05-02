@@ -1,0 +1,1587 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>HTML/CSS With Perl Test Page</title>
+		<style>
+
+		#ballpark	{
+			height: 750px;
+			width: 780px;
+			background-color: #afcfaf;
+		}
+		
+		#banner	{
+			height: 90px;
+			left: 0px;
+			top: 0px;
+			width: 778px;
+			font-size: 18px;
+			font-family: Tahoma;
+			font-weight: bold;
+			background-color: #afcfaf;
+			color: #006400;
+			text-align: center;
+			border: 2px solid #006400;
+		}
+
+		#dinosaurslineup	{
+			font-size: 18px;
+			font-family: Tahoma;
+			height: 270px;
+			width: 210px;
+			top: 150px;
+			position: absolute;
+			left: 20px;
+			border: 1px solid white;
+			float: left;
+			background-color: #006400;
+			color: white;
+		}
+		#dinosaurslineup li	{
+			list-style-type: none;
+			border: 1px solid black;
+			height: 25px;
+			background-color: #006400;
+			color: white;
+		}
+
+		#vteam	{
+			text-align: center;
+			font-weight: bold;
+			border-bottom: 2px;
+		}
+
+		#hteam	{
+			text-align: center;
+			font-weight: bold;
+			border-bottom: 2px;
+		}
+
+		#topdisplay	{
+			top: 100px;
+			left: 242px;
+			height: 140px;
+			width: 320px;
+			top: 110px;
+			font-family: Tahoma;
+			position: absolute;
+			float: left;
+			background-color: #006400;
+			color: white;
+			border: 1px solid white;
+		}
+
+		#diamond	{
+			height: 160px;
+			width: 160px;
+			top: 290px;
+			left: 315px;
+			background-color: #a06e2c;
+			float: left;
+			position: absolute;
+			transform: rotate(-45deg);
+			border: 1px solid black;
+			float: left;
+		}
+		#diamondHP	{
+			height: 35px;
+			width: 35px;
+			top: 125px;
+			left: 0px;
+			background-color: white;
+			position: absolute;
+		}
+		#diamond1B	{
+			height: 35px;
+			width: 35px;
+			top: 125px;
+			left: 125px;
+			background-color: white;
+			position: absolute;
+		}
+		#diamond2B	{
+			height: 35px;
+			width: 35px;
+			top: 0px;
+			left: 125px;
+			background-color: white;
+			position: absolute;
+		}
+		#diamond3B	{
+			height: 35px;
+			width: 35px;
+			top: 0px;
+			left: 0px;
+			background-color: white;
+			position: absolute;
+		}
+		#dragonslineup	{
+			font-size: 18px;
+			font-family: Tahoma;
+			height: 270px;
+			width: 200px;
+			top: 150px;
+			position: absolute;
+			left: 575px;
+			border: 1px solid white;
+			background-color: #006400;
+			color: white;
+			}
+		#dragonslineup li	{
+			list-style-type: none;
+			border: 1px solid black;
+			height: 25px;
+			background-color: #006400;
+			color: white;
+		}
+
+		#batterphoto	{
+			font-size: 18px;
+			font-family: Verdana;
+			height: 120px;
+			width: 120px;
+			top: 500px;
+			left: 50px;
+			position: absolute;
+			border: 2px solid black;
+			background-color: #404040;
+			color: #ffd700;
+			border: 3px dashed #ffd700;
+		}
+
+		#batterdisplay	{
+			font-size: 18px;
+			font-family: Verdana;
+			height: 60px;
+			width: 500px;
+			top: 530px;
+			left: 200px;
+			position: absolute;
+			border: 2px solid black;
+			background-color: #404040;
+			color: #ffd700;
+		}
+
+		.singlewidth	{
+			width: 50px;
+			height: 20px;
+			text-align: center;
+		}
+
+		.doublewidth	{
+			width: 70px;
+			height: 25px;
+			text-align: center;
+		}
+
+		.triplewidth	{
+			width: 240px;
+			height: 25px;
+			text-align: center;
+		}
+
+		#action	{
+			position: absolute;
+			float: left;
+			top: 710px;
+			height: 300px;
+			width: 400px;
+			font-family: Verdana;
+			font-size; 14px;
+			border: 1px solid black;
+			display: none;
+		}
+
+		#action-right	{
+			position: absolute;
+			float: left;
+			top: 710px;
+			height: 350px;
+			width: 200px;
+			left: 420px;
+			font-family: Verdana;
+			font-size: 14px;
+			border: 1px dashed black;
+			display: none;
+		}
+		#scoreboard	{
+			float: left;
+			font-size: 18px;
+			font-family: Tahoma;
+			font-weight: bold;
+			width: 650px;
+			height: 90px;
+			top: 640px;
+			left: 70px;
+			border: 1px solid navy;
+			background-color: #006400;
+			color: white;
+			text-align: center;
+			position: absolute;
+		}
+		.scorerow		{
+			float: left;
+			position: relative;
+			width: 650px;
+			height: 30px;
+			ms-display: flexbox;
+			display: -webkit-flex;
+		}
+		.team	{
+			float: left;
+			flex: 5;
+			-webkit-flex: 5;
+			border: 1px solid black;
+		}
+		.inn	{
+			float: left;
+			flex: 1;
+			-webkit-flex: 1;
+			border: 1px solid black;
+		}
+
+		#active		{
+			height: 350px;
+			width: 100%;
+			top: 900px;
+			position: absolute;
+		}
+		#active_left	{
+			float: left;
+			width: 100px;
+			height: 100%;
+		}
+		#active_right	{
+			float: left;
+			width: 100px;
+			height: 100%;
+		}
+		#active_center	{
+			float: left;
+			width: 400px;
+			height: 100%;
+		}
+
+		#ratingtables{
+			position: absolute;
+			top: 1060px;
+			height: 200px;
+			width: 800px;
+			left: 0px;
+			font-family: Verdana;
+			font-size: 14px;
+			border: 1px solid double;
+			display: none;
+		}
+
+		</style>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			var xmlhttp;
+
+			window.onload = function()
+			{
+				xmlhttp = new XMLHttpRequest();
+				xmlhttp.onreadystatechange = receiveData;
+				xmlhttp.open("POST","runbases.php",true);
+
+				document.getElementById("outsInning").value = "0";
+				document.getElementById("runsInning").value = 0;
+
+			}
+
+			function receiveData()
+				{
+					if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
+					{	
+						document.getElementById("fromPHP").value = xmlhttp.responseText;	
+				}
+			}
+
+		</script>
+	</head>
+	<body>
+		<div id="ballpark">
+		<div id="banner">
+			<p>FANTASY BASEBALL : DRAGONS VS. DINOSAURS<br>
+			<br>
+			(Like I said, this is true fantasy baseball)</p>
+		</div>
+		<div id="dinosaurslineup">
+			<li id="vteam">DINOSAURS</li>
+			<li id="vpos1">T-BALLER</li>
+			<li id="vpos2">LONGORY</li>
+			<li id="vpos3">GAMERANDA</li>
+			<li id="vpos4">PSYCHOSAURUS</li>
+			<li id="vpos5">DINOSAUR JR JR</li>
+			<li id="vpos6">SCALELESS JOE</li>
+			<li id="vpos7">THREE FINGER BRONTO</li>
+			<li id="vpos8">OIL CAN STEGOSAURUS</li>
+			<li id="vpos9">GROGGGGGGGG</li>
+	</div>
+	<div id="topdisplay">
+		<table id="toptable">
+		<tr>
+		<th>INNING</th><th>OUTS</th><th>AT BAT</th><th>PITCH RESULT</th>
+		</tr>
+		<tr>
+		<td class="singlewidth" id="inningnumber" name="inningnumber">1</td>
+		<td class="singlewidth" id="outsInning" name="outsInning">0</td>
+		<td class="doublewidth" id="teamatbat" name="teamatbat">Dinosaurs</td>
+		<td class="singlewidth" id="displaypitchresult" name="displaypitchresult"></td>
+		</tr>
+		<tr><td class="singlewidth" >------------</td><td class="singlewidth">-------</td><td class="singlewidth">--------</td><td class="singlewidth">------------</td></tr>
+		<tr>
+		<td class="singlewidth">
+		<input type="button" onclick="stepuptothePlate();" value="BATTER UP" /></td>
+		<td class="singlewidth"></td><td class="singlewidth"></td>
+		<td class="singlewidth"><button id="updatethediamondbutton" onClick="updatetheDiamond()">PITCH</button></td>                         
+		</tr>
+		</table>
+	</div>
+		<div id="active-center">
+			<div id="diamond">
+					<div id="diamond3B"></div>
+					<div id="diamond2B"></div>
+					<div id="diamond1B"></div>
+					<div id="diamondHP"></div>
+			</div>
+		</div>
+
+	<div id="dragonslineup">
+			<li id="hteam">DRAGONS</li>
+			<li id="hpos1">BASFTHIEFF</li>
+			<li id="hpos2">PREZZEMELO</li>
+			<li id="hpos3">TEMERAIRE</li>
+			<li id="hpos4">BATFYRE</li>
+			<li id="hpos5">WARMONGER</li>
+			<li id="hpos6">SHEEPSTEALER</li>
+			<li id="hpos7">BROGON</li>
+			<li id="hpos8">NORBERT JR.</li>
+			<li id="hpos9">SMOGGGGGGG</li>
+		</div>
+
+	<div id="batterphoto">
+	</div>
+	<div id="batterdisplay">
+		<table id="battertable">
+		<tr>
+		<th class="triplewidth">BATTER</th><th class="doublewidth">AVG.</th><th class="doublewidth">HR</th><th class="doublewidth">RBI</th>
+		</tr>
+		<tr>
+		<td height="100" class="triplewidth" id="battername" name="battername" align="center"></td>
+		<td height="100" class="doublewidth" id="battingavg" name="battingavg" align="center"></td>
+		<td height="100" class="doublewidth" id="homersdisplay" name="homersdisplay" align="center"></td>
+		<td height="100" class="doublewidth" id="rbisdisplay" name="rbisdisplay" align="center"></td>
+		</tr>
+		</table>
+
+	</div>
+	<div id="action">
+			<label>First Base</label><input type="text" id="runner1B" name="runner1B"><br>
+			<label>Second Base</label><input type="text" id="runner2B" name="runner2B"><br>
+			<label>Third Base</label><input type="text" id="runner3B" name="runner3B"><br>
+			<label>Runs</label><input type="text" id="Runs" name="Runs" value="0"><br>
+			<label>Result of PHP:</label><input type="text" id="fromPHP" name="fromPHP" />
+			<br>				
+			<label>Values returned from PHP File</label><br />
+			<label>New first base</label><input type="text" id="return1B" name="return1B"><br>
+			<label>New second base</label><input type="text" id="return2B" name="return2B"><br>
+			<label>New third base</label><input type="text" id="return3B" name="return3B"><br>
+			<label>New runs</label><input type="text" id="returnRuns" name="returnRuns"><br>
+
+		</div>
+		<div id="action-right">
+					<label>dragons Lineup</label><input type="text" id="dragonslineupnumber" name="dragonslineupnumber" value="0" size="10" /><button id="nextDragonsBatter" onClick="nextDragonsBatter()">Next Dragons Batter</button><br />
+					<label>Dinosaurs Lineup</label><input type="text" id="dinosaurslineupnumber" name="dinosaurslineupnumber" value="0" size="10" /><button id="nextdinosaursBatter" onClick="nextdinosaursBatter()">Next Dinosaurs Batter</button><br />
+<form name="dragonsform" action="">  
+		<label>Lineup Number</label><input type="text" id="lineupnumber" name="lineupnumber" size="10"/><br>
+		<label> Batter</label><input type="text" id="battername" name="battername" size="20" /><br>
+	<label>Position</label><input type="text" id="position" name="position" size="10"/><br>
+		<label>Batter Rating</label><input type="text" id="batterrating" name="batterrating" size="10" /><br>
+		<label>      HR Rating</label><input type="text" id="HRrating" name="HRrating" size="10" /><br>
+		<label>Triple Rating</label><input type="text" id="triplerating" name="triplerating" size="10" /><br>
+		<label>      Double Rating</label><input type="text" id="doublerating" name="doublerating" size="10" /><br>
+		</form>
+		<br>
+				<label>The Pitch:</label><br>
+					<input type="text" id="pitch" name="pitch" size="10" /><br>
+					<label>Pitch result</label>
+					<input type="text" id="pitchresult" name="pitchresult" size="10" /><br>
+					<label>Runs in Inning</label><input type="text" id="runsInning" name="runsInning" width="40"><br>
+
+		<br><br>
+
+		</div>
+			<div id="scoreboard">
+		<div id="HDRdisplay" class="scorerow">
+			<div id="teamdisplay" class="team">TEAM</div>
+			<div id="inn1" class="inn">1</div>
+			<div id="inn2" class="inn">2</div>
+			<div id="inn3" class="inn">3</div>
+			<div id="inn4" class="inn">4</div>
+			<div id="inn5" class="inn">5</div>
+			<div id="inn6" class="inn">6</div>
+			<div id="inn7" class="inn">7</div>
+			<div id="inn8" class="inn">8</div>
+			<div id="inn9" class="inn">9</div>
+			<div id="innX" class="inn">10</div>
+			<div id="innR" class="inn">R</div>
+			<div id="innH" class="inn">H</div>
+			<div id="innE" class="inn">E</div>
+		</div>
+		<div id="VISdisplay" class="scorerow">
+			<div id="Visitordisplay" class="team">DINOSAURS</div>
+			<div id="Vinn1" class="inn"></div>
+			<div id="Vinn2" class="inn"></div>
+			<div id="Vinn3" class="inn"></div>
+			<div id="Vinn4" class="inn"></div>
+			<div id="Vinn5" class="inn"></div>
+			<div id="Vinn6" class="inn"></div>
+			<div id="Vinn7" class="inn"></div>
+			<div id="Vinn8" class="inn"></div>
+			<div id="Vinn9" class="inn"></div>
+			<div id="VinnX" class="inn"></div>
+			<div id="VinnR" class="inn">0</div>			
+			<div id="VinnH" class="inn">0</div>
+			<div id="VinnE" class="inn">0</div>
+		</div>
+		<div id="HOMEdisplay" class="scorerow">
+			<div id="Homedisplay" class="team">DRAGONS</div>
+			<div id="Hinn1" class="inn"></div>
+			<div id="Hinn2" class="inn"></div>
+			<div id="Hinn3" class="inn"></div>
+			<div id="Hinn4" class="inn"></div>
+			<div id="Hinn5" class="inn"></div>
+			<div id="Hinn6" class="inn"></div>
+			<div id="Hinn7" class="inn"></div>
+			<div id="Hinn8" class="inn"></div>
+			<div id="Hinn9" class="inn"></div>
+			<div id="HinnX" class="inn"></div>
+			<div id="HinnR" class="inn">0</div>
+			<div id="HinnH" class="inn">0</div>
+			<div id="HinnE" class="inn">0</div>
+		</div>
+		</div>	 <!-- end of scoreboard div -->
+
+
+		<div id="active">
+			<div id="active_left"></div>
+			<div id="active_right"></div>
+		</div>
+		</div>  <!-- end of div lineup -->
+		<div id="ratingtables">
+		<table id="dinosaursratingtable">
+		<tr><td id="firstbatter"></td></tr>
+		<tr><td id="secondbatter"></td></tr>
+		<tr><td id="thirdbatter"></td></tr>
+		<tr><td id="fourthbatter"></td></tr>
+		<tr><td id="fifthbatter"></td></tr>
+		<tr><td id="sixthbatter"></td></tr>
+		<tr><td id="seventhbatter"></td></tr>
+		<tr><td id="eighthbatter"></td></tr>
+		<tr><td id="ninthbatter"></td></tr>
+		</table>
+		<table id="dragonsratingtable">
+		<tr><td id="dragonsfirstbatter"></td></tr>
+		<tr><td id="dragonssecondbatter"></td></tr>
+		<tr><td id="dragonsthirdbatter"></td></tr>
+		<tr><td id="dragonsfourthbatter"></td></tr>
+		<tr><td id="dragonsfifthbatter"></td></tr>
+		<tr><td id="dragonssixthbatter"></td></tr>
+		<tr><td id="dragonsseventhbatter"></td></tr>
+		<tr><td id="dragonseighthbatter"></td></tr>
+		<tr><td id="dragonsninthbatter"></td></tr>
+		</table>
+		</div>
+		</div>  <!-- end of ballpark div -->
+		<script>
+				$.get('http://www.thatsmrjuice2u.com/HTML5/dragons.txt', function(data){
+				var DragonsCrew = data.split('\n');
+				document.getElementById("dragonsfirstbatter").innerText = DragonsCrew[0];
+				document.getElementById("dragonssecondbatter").innerText = DragonsCrew[1];
+				document.getElementById("dragonsthirdbatter").innerText = DragonsCrew[2];
+				document.getElementById("dragonsfourthbatter").innerText = DragonsCrew[3];
+				document.getElementById("dragonsfifthbatter").innerText = DragonsCrew[4];
+				document.getElementById("dragonssixthbatter").innerText = DragonsCrew[5];
+				document.getElementById("dragonsseventhbatter").innerText = DragonsCrew[6];
+				document.getElementById("dragonseighthbatter").innerText =DragonsCrew[7];
+				document.getElementById("dragonsninthbatter").innerText = DragonsCrew[8];
+
+				});
+
+				$.get('http://www.thatsmrjuice2u.com/HTML5/dinosaurs.txt', function(data2){
+				var DinosaursCrew = data2.split('\n');
+				document.getElementById("firstbatter").innerText = DinosaursCrew[0];
+				document.getElementById("secondbatter").innerText = DinosaursCrew[1];
+				document.getElementById("thirdbatter").innerText = DinosaursCrew[2];
+				document.getElementById("fourthbatter").innerText = DinosaursCrew[3];
+				document.getElementById("fifthbatter").innerText = DinosaursCrew[4];
+				document.getElementById("sixthbatter").innerText = DinosaursCrew[5];
+				document.getElementById("seventhbatter").innerText = DinosaursCrew[6];
+				document.getElementById("eighthbatter").innerText = DinosaursCrew[7];
+				document.getElementById("ninthbatter").innerText = DinosaursCrew[8];
+				});
+
+		function makePitch()	{
+				var p =  Math.floor((Math.random()	* 1000 ) + 1 );
+				var br = document.getElementById("batterrating").value;
+				var hr = document.getElementById("HRrating").value;
+				var tbr = document.getElementById("triplerating").value;
+				var dbr = document.getElementById("doublerating").value;
+				var oldhits = 0;
+				var oldhhits = 0;
+				var result;
+				if (p < hr)	{
+					result = "HOMERUN";
+					var tab = document.getElementById("teamatbat").innerText;
+					if ( tab == "Dragons" )		{
+						oldhits = document.getElementById("HinnH").innerHTML;
+						var oh = parseInt(oldhits);
+						oh++;
+						document.getElementById("HinnH").innerHTML = oh;
+						}
+					else	{
+						oldhhits = document.getElementById("VinnH").innerHTML;
+						var ohh = parseInt(oldhhits);
+						ohh++;
+						document.getElementById("VinnH").innerHTML = ohh;
+					}
+				} else if (p < tbr)	{
+					result = "TRIPLE";
+					var tab = document.getElementById("teamatbat").innerText;
+					if ( tab == "Dragons" )		{
+						oldhits = document.getElementById("HinnH").innerHTML;
+						var oh = parseInt(oldhits);
+						oh++;
+						document.getElementById("HinnH").innerHTML = oh;
+						}
+					else	{
+						oldhhits = document.getElementById("VinnH").innerHTML;
+						var ohh = parseInt(oldhhits);
+						ohh++;
+						document.getElementById("VinnH").innerHTML = ohh;
+					}
+				} else if (p < dbr)	{
+					result = "DOUBLE";
+					var tab = document.getElementById("teamatbat").innerText;
+					if ( tab == "Dragons" )		{
+						oldhits = document.getElementById("HinnH").innerHTML;
+						var oh = parseInt(oldhits);
+						oh++;
+						document.getElementById("HinnH").innerHTML = oh;
+						}
+					else	{
+						oldhhits = document.getElementById("VinnH").innerText;
+						var ohh = parseInt(oldhhits);
+						ohh++;
+						document.getElementById("VinnH").innerHTML = ohh;
+					}
+
+				} else if (p < br) {
+					result = "SINGLE";
+					var tab = document.getElementById("teamatbat").innerText;
+					if ( tab == "Dragons" )		{
+						oldhits = document.getElementById("HinnH").innerHTML;
+						var oh = parseInt(oldhits);
+						oh++;
+						document.getElementById("HinnH").innerHTML = oh;
+						}
+					else	{
+						oldhhits = document.getElementById("VinnH").innerHTML;
+						var ohh = parseInt(oldhhits);
+						ohh++;
+						document.getElementById("VinnH").innerHTML = ohh;
+					}
+				} else	{
+					result = "OUT";	
+				} 
+
+				document.getElementById("pitch").value = p;
+				document.getElementById("pitchresult").value = result;
+				runtheBases();
+			}
+
+
+			function runtheBases()
+			{
+					xmlhttp = new XMLHttpRequest();
+					xmlhttp.onreadystatechange = receiveData;
+					xmlhttp.open("POST","runbases.php",true);
+
+					if ( document.getElementById("diamond1B").style.backgroundColor == "black"  && document.getElementById("diamond2B").style.backgroundColor == "black" && document.getElementById("diamond3B").style.backgroundColor == "black") {
+						 document.getElementById("runner1B").value = "X";
+						document.getElementById("runner2B").value = "X";
+						document.getElementById("runner3B").value = "X";
+							var first = "X";
+							var second = "X";
+							var third = "X";
+					}
+
+					else if ( document.getElementById("diamond2B").style.backgroundColor == "black" && document.getElementById("diamond3B").style.backgroundColor == "black") {
+						 document.getElementById("runner1B").value = "O";
+						document.getElementById("runner2B").value = "X";
+						document.getElementById("runner3B").value = "X";
+							var first = "O";
+							var second = "X";
+							var third = "X";
+					}
+
+					else if ( document.getElementById("diamond1B").style.backgroundColor == "black"  && document.getElementById("diamond3B").style.backgroundColor == "black") {
+						 document.getElementById("runner1B").value = "X";
+						document.getElementById("runner2B").value = "O";
+						document.getElementById("runner3B").value = "X";
+							var first = "X";
+							var second = "O";
+							var third = "X";
+					}
+
+					else if ( document.getElementById("diamond1B").style.backgroundColor == "black"  && document.getElementById("diamond2B").style.backgroundColor == "black" ) {
+						 document.getElementById("runner1B").value = "X";
+						document.getElementById("runner2B").value = "X";
+						document.getElementById("runner3B").value = "O";
+							var first = "X";
+							var second = "X";
+							var third = "O";
+					}
+
+					else if ( document.getElementById("diamond1B").style.backgroundColor == "black") {
+						 document.getElementById("runner1B").value = "X";
+							var first = "X";
+							var second = "O";
+							var third = "O";
+					}
+					else if ( document.getElementById("diamond2B").style.backgroundColor == "black") {
+						 document.getElementById("runner2B").value = "X";
+							var first = "O";
+							var second = "X";
+							var third = "O";
+					}
+					else if ( document.getElementById("diamond3B").style.backgroundColor == "black") {
+						 document.getElementById("runner3B").value = "X";
+							var first = "O";
+							var second = "O";
+							var third = "X";
+					}
+					else	{
+							var first = "O";
+							var second = "O";
+							var third = "O";
+					}
+					
+					var homeplate = document.getElementById("Runs").value;  
+					var basehit = document.getElementById("pitchresult").value;		
+					var sendvar = "firstbase=" + first + "&secondbase=" + second + "&thirdbase=" + third + "&currentruns=" + homeplate + "&hit=" + basehit;
+					xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+					xmlhttp.send(sendvar);
+			}
+
+			function stepuptothePlate()		{
+				document.getElementById("displaypitchresult").innerText = "";
+				var teamup = document.getElementById("teamatbat").innerText;
+				var inn = document.getElementById("inningnumber").innerText;
+				if ( teamup == "Dragons" )	{	
+					nextDragonsBatter();
+					var whosup = document.getElementById("dragonslineupnumber").value;
+					switch(whosup)	{
+						case "1":
+							dragonstableline = document.getElementById("dragonsfirstbatter").innerText;
+							dragonsbatterline = dragonstableline.split(",");
+							document.getElementById("batterphoto").innerHTML = "<img src='../images/Dragon Gifs/Dragon1.jpeg' width='120' height='120'>"
+							break;
+						case "2":
+							dragonstableline = document.getElementById("dragonssecondbatter").innerText;
+							dragonsbatterline = dragonstableline.split(",");
+							document.getElementById("batterphoto").innerHTML = "<img src='../images/Dragon Gifs/Dragon2.jpeg' width='120' height='120'>"
+
+							break;	
+						case "3":
+							dragonstableline = document.getElementById("dragonsthirdbatter").innerText;
+							dragonsbatterline = dragonstableline.split(",");
+							document.getElementById("batterphoto").innerHTML = "<img src='../images/Dragon Gifs/Dragon3.jpeg' width='120' height='120'>"
+
+							break;
+						case "4":
+							dragonstableline = document.getElementById("dragonsfourthbatter").innerText;
+							dragonsbatterline = dragonstableline.split(",");
+							document.getElementById("batterphoto").innerHTML = "<img src='../images/Dragon Gifs/Dragon4.jpeg' width='120' height='120'>"
+
+							break;
+						case "5":
+							dragonstableline = document.getElementById("dragonsfifthbatter").innerText;
+							dragonsbatterline = dragonstableline.split(",");
+							document.getElementById("batterphoto").innerHTML = "<img src='../images/Dragon Gifs/Dragon5.jpeg' width='120' height='120'>"
+
+							break;
+						case "6":
+							dragonstableline = document.getElementById("dragonssixthbatter").innerText;
+							dragonsbatterline = dragonstableline.split(",");
+							document.getElementById("batterphoto").innerHTML = "<img src='../images/Dragon Gifs/Dragon6.jpeg' width='120' height='120'>"
+
+							break;
+						case "7":
+							dragonstableline = document.getElementById("dragonsseventhbatter").innerText;
+							dragonsbatterline = dragonstableline.split(",");
+							document.getElementById("batterphoto").innerHTML = "<img src='../images/Dragon Gifs/Dragon7.jpeg' width='120' height='120'>"
+
+							break;
+						case "8":
+							dragonstableline = document.getElementById("dragonseighthbatter").innerText;
+							dragonsbatterline = dragonstableline.split(",");
+							document.getElementById("batterphoto").innerHTML = "<img src='../images/Dragon Gifs/Dragon8.jpeg' width='120' height='120'>"
+
+							break;
+						case "9":
+							dragonstableline = document.getElementById("dragonsninthbatter").innerText;
+							dragonsbatterline = dragonstableline.split(",");
+							document.getElementById("batterphoto").innerHTML = "<img src='../images/Dragon Gifs/Dragon9.png' width='120' height='120'>"
+
+							break;			
+						}
+
+						document.getElementById("lineupnumber").value = dragonsbatterline[1];
+						document.getElementById("battername").innerText = dragonsbatterline[0];
+						document.getElementById("batterrating").value = dragonsbatterline[3];					document.getElementById("HRrating").value = dragonsbatterline[4];
+						document.getElementById("battingavg").innerText = dragonsbatterline[7];
+						document.getElementById("homersdisplay").innerText = dragonsbatterline[10];
+						document.getElementById("rbisdisplay").innerText = dragonsbatterline[11];
+
+					if ( whosup == 1)	{
+							document.getElementById("hpos1").style.backgroundColor = "red";
+						}
+				}  else	{
+					nextDinosaursBatter();
+					var whosup = document.getElementById("dinosaurslineupnumber").value;
+					switch(whosup)	{
+						case "1":
+							tableline = document.getElementById("firstbatter").innerText;
+							batterline = tableline.split(",");
+							document.getElementById("batterphoto").innerHTML = "<img src='../images/Dinosaur Gifs/Dinosaur1.jpeg' width='120' height='120'>"
+							break;
+						case "2":
+							tableline = document.getElementById("secondbatter").innerText;
+							batterline = tableline.split(",");
+							document.getElementById("batterphoto").innerHTML = "<img src='../images/Dinosaur Gifs/Dinosaur2.jpeg' width='120' height='120'>"
+							break;	
+						case "3":
+							tableline = document.getElementById("thirdbatter").innerText;
+							batterline = tableline.split(",");
+							document.getElementById("batterphoto").innerHTML = "<img src='../images/Dinosaur Gifs/Dinosaur3.jpeg' width='120' height='120'>"
+							break;
+						case "4":
+							tableline = document.getElementById("fourthbatter").innerText;
+							batterline = tableline.split(",");
+							document.getElementById("batterphoto").innerHTML = "<img src='../images/Dinosaur Gifs/Dinosaur4.jpeg' width='120' height='120'>"
+							break;
+						case "5":
+							tableline = document.getElementById("fifthbatter").innerText;
+							batterline = tableline.split(",");
+							document.getElementById("batterphoto").innerHTML = "<img src='../images/Dinosaur Gifs/Dinosaur5.png' width='120' height='120'>"
+							break;
+						case "6":
+							tableline = document.getElementById("sixthbatter").innerText;
+							batterline = tableline.split(",");
+							document.getElementById("batterphoto").innerHTML = "<img src='../images/Dinosaur Gifs/Dinosaur6.png' width='120' height='120'>"
+							break;
+						case "7":
+							tableline = document.getElementById("seventhbatter").innerText;
+							batterline = tableline.split(",");
+							document.getElementById("batterphoto").innerHTML = "<img src='../images/Dinosaur Gifs/Dinosaur7.jpeg' width='120' height='120'>"
+							break;
+						case "8":
+							tableline = document.getElementById("eighthbatter").innerText;
+							batterline = tableline.split(",");
+							document.getElementById("batterphoto").innerHTML = "<img src='../images/Dinosaur Gifs/Dinosaur8.jpeg' width='120' height='120'>"
+							break;
+						case "9":
+							tableline = document.getElementById("ninthbatter").innerText;
+							batterline = tableline.split(",");
+							document.getElementById("batterphoto").innerHTML = "<img src='../images/Dinosaur Gifs/Dinosaur9.jpeg' width='120' height='120'>"
+							break;			
+						}
+
+						document.getElementById("lineupnumber").value = batterline[1];
+						document.getElementById("battername").innerText = batterline[0];
+						document.getElementById("batterrating").value = batterline[3];							document.getElementById("HRrating").value = batterline[4];
+						document.getElementById("triplerating").value = batterline[5];
+						document.getElementById("doublerating").value = batterline[6];
+						document.getElementById("battingavg").innerText = batterline[7];						document.getElementById("homersdisplay").innerText = batterline[10];
+
+						document.getElementById("rbisdisplay").innerText = batterline[11];
+
+					if ( whosup == 1)	{
+							document.getElementById("vpos1").style.backgroundColor = "red";
+						}
+
+				}
+				makePitch();
+			}
+
+		function updatetheDiamond()	{
+				var pr = document.getElementById("pitchresult").value;
+				document.getElementById("displaypitchresult").innerText = pr;
+				a = document.getElementById("fromPHP").value;
+				bases = a.split("");
+				document.getElementById("return1B").value = bases[0];
+				document.getElementById("return2B").value = bases[1];
+				document.getElementById("return3B").value = bases[2];
+				document.getElementById("returnRuns").value = bases[3];
+				b1 = document.getElementById("return1B").value;
+				b2 = document.getElementById("return2B").value;
+				b3 = document.getElementById("return3B").value;
+				score = document.getElementById("returnRuns").value;
+
+				if ( b1 == "X" )	{
+					document.getElementById("diamond1B").style.backgroundColor = "black";
+					document.getElementById("runner1B").value = "X";
+				} else if ( b1 == "0" ) {
+					document.getElementById("diamond1B").style.backgroundColor = "white";
+					document.getElementById("runner1B").value = "";
+				}
+					else	{
+						;
+				}
+
+				if ( b2 == "X" )	{
+					document.getElementById("diamond2B").style.backgroundColor = "black";
+					document.getElementById("runner2B").value = "X";
+				} else if ( b2 == "0") {
+					document.getElementById("diamond2B").style.backgroundColor = "white";
+					document.getElementById("runner2B").value = "";
+				}
+					else 	{
+						;
+				}
+
+				if ( b3 == "X" )	{
+					document.getElementById("diamond3B").style.backgroundColor = "black";
+					document.getElementById("runner3B").value = "X";
+				} else if ( b3 == "0") {
+					document.getElementById("diamond3B").style.backgroundColor = "white";
+					document.getElementById("runner3B").value = "";
+				}
+					else	{
+						;
+				}
+
+				var theScore = parseInt(score);
+				if ( theScore > 0 )  { 
+					var a = document.getElementById("runsInning").value;
+					var curRuns = parseInt(a);
+					var updRuns = curRuns + theScore;
+					document.getElementById("runsInning").value = updRuns;
+					updateRunsInning;
+					updateRuns(theScore);
+				}
+
+				if ( pr == "OUT" )	{
+					var g = document.getElementById("outsInning").innerText;
+					var curOuts = parseInt(g);
+					curOuts++;
+					if ( curOuts > 2 )	{
+						alert("Change sides");
+						document.getElementById("outsInning").innerText = "0";
+						changeTeam();
+						document.getElementById("pitch").value = "";
+						document.getElementById("pitchresult").value = "";
+						document.getElementById("displaypitchresult").innerText = "";
+					} else	{
+						document.getElementById("outsInning").innerText = curOuts;
+					}
+				}
+
+				if ( pr == "HOMERUN" )	{
+					HomeRunSequence();
+				}
+
+			}  
+
+			function updateRunsInning()	{
+				var a = document.getElementById("runsInning").value;
+				var b = document.getElementById("returnRuns").value;
+				var curRuns = parseInt(a);
+				var addRuns = parseInt(b);
+				var updRuns = curRuns + addRuns;
+				document.getElementById("runsInning").value = updRuns;
+			}
+
+			function updateRuns(R)	{
+				var whosbatting = document.getElementById("teamatbat").innerText;
+				var ww = document.getElementById("inningnumber").innerText;
+				var Inning = parseInt(ww);
+				var runsScoredInning = R;
+				if ( whosbatting == "Dragons" )	{
+					switch (Inning)	{
+						case 1:
+							var oldRSG = document.getElementById("HinnR").innerHTML;
+							var oldRSI = document.getElementById("Hinn1").innerHTML;
+							if ( oldRSI === "" )	{
+								oldRunsInning = 0;
+							} else	{
+								oldRunsInning = parseInt(oldRSI);
+							}
+							oldRunsGame = parseInt(oldRSG);
+							updRunsInning = oldRunsInning + runsScoredInning;
+							updRunsGame = oldRunsGame + runsScoredInning;
+							document.getElementById("Hinn1").innerHTML = updRunsInning;
+							document.getElementById("HinnR").innerHTML = updRunsGame;
+							break;
+						case 2:
+							var oldRSG = document.getElementById("HinnR").innerHTML;
+							var oldRSI = document.getElementById("Hinn2").innerHTML;
+							if ( oldRSI === "" )	{
+								oldRunsInning = 0;
+							} else	{
+								oldRunsInning = parseInt(oldRSI);
+							}
+							oldRunsGame = parseInt(oldRSG);
+							updRunsInning = oldRunsInning + runsScoredInning;
+							updRunsGame = oldRunsGame + runsScoredInning;
+							document.getElementById("Hinn2").innerHTML = updRunsInning;
+							document.getElementById("HinnR").innerHTML = updRunsGame;
+							break;
+						case 3:		
+							var oldRSG = document.getElementById("HinnR").innerHTML;
+							var oldRSI = document.getElementById("Hinn3").innerHTML;
+							if ( oldRSI === "" )	{
+								oldRunsInning = 0;
+							} else	{
+								oldRunsInning = parseInt(oldRSI);
+							}
+							oldRunsGame = parseInt(oldRSG);
+							updRunsInning = oldRunsInning + runsScoredInning;
+							updRunsGame = oldRunsGame + runsScoredInning;
+							document.getElementById("Hinn3").innerHTML = updRunsInning;
+							document.getElementById("HinnR").innerHTML = updRunsGame;
+							break;	
+						case 4:
+							var oldRSG = document.getElementById("HinnR").innerHTML;
+							var oldRSI = document.getElementById("Hinn4").innerHTML;
+							if ( oldRSI === "" )	{
+								oldRunsInning = 0;
+							} else	{
+								oldRunsInning = parseInt(oldRSI);
+							}
+							oldRunsGame = parseInt(oldRSG);
+							updRunsInning = oldRunsInning + runsScoredInning;
+							updRunsGame = oldRunsGame + runsScoredInning;
+							document.getElementById("Hinn4").innerHTML = updRunsInning;
+							document.getElementById("HinnR").innerHTML = updRunsGame;
+							break;
+						case 5:
+							var oldRSG = document.getElementById("HinnR").innerHTML;
+							var oldRSI = document.getElementById("Hinn5").innerHTML;
+							if ( oldRSI === "" )	{
+								oldRunsInning = 0;
+							} else	{
+								oldRunsInning = parseInt(oldRSI);
+							}
+							oldRunsGame = parseInt(oldRSG);
+							updRunsInning = oldRunsInning + runsScoredInning;
+							updRunsGame = oldRunsGame + runsScoredInning;
+							document.getElementById("Hinn5").innerHTML = updRunsInning;
+							document.getElementById("HinnR").innerHTML = updRunsGame;
+							break;
+						case 6:
+							var oldRSG = document.getElementById("HinnR").innerHTML;
+							var oldRSI = document.getElementById("Hinn6").innerHTML;
+							if ( oldRSI === "" )	{
+								oldRunsInning = 0;
+							} else	{
+								oldRunsInning = parseInt(oldRSI);
+							}
+							oldRunsGame = parseInt(oldRSG);
+							updRunsInning = oldRunsInning + runsScoredInning;
+							updRunsGame = oldRunsGame + runsScoredInning;
+							document.getElementById("Hinn6").innerHTML = updRunsInning;
+							document.getElementById("HinnR").innerHTML = updRunsGame;
+							break;
+						case 7:
+							var oldRSG = document.getElementById("HinnR").innerHTML;
+							var oldRSI = document.getElementById("Hinn7").innerHTML;
+							if ( oldRSI === "" )	{
+								oldRunsInning = 0;
+							} else	{
+								oldRunsInning = parseInt(oldRSI);
+							}
+							oldRunsGame = parseInt(oldRSG);
+							updRunsInning = oldRunsInning + runsScoredInning;
+							updRunsGame = oldRunsGame + runsScoredInning;
+							document.getElementById("Hinn7").innerHTML = updRunsInning;
+							document.getElementById("HinnR").innerHTML = updRunsGame;
+							break;
+						case 8:
+							var oldRSG = document.getElementById("HinnR").innerHTML;
+							var oldRSI = document.getElementById("Hinn8").innerHTML;
+							if ( oldRSI === "" )	{
+								oldRunsInning = 0;
+							} else	{
+								oldRunsInning = parseInt(oldRSI);
+							}
+							oldRunsGame = parseInt(oldRSG);
+							updRunsInning = oldRunsInning + runsScoredInning;
+							updRunsGame = oldRunsGame + runsScoredInning;
+							document.getElementById("Hinn8").innerHTML = updRunsInning;
+							document.getElementById("HinnR").innerHTML = updRunsGame;
+							break;
+						case 9:
+							var oldRSG = document.getElementById("HinnR").innerHTML;
+							var oldRSI = document.getElementById("Hinn9").innerHTML;
+							if ( oldRSI === "" )	{
+								oldRunsInning = 0;
+							} else	{
+								oldRunsInning = parseInt(oldRSI);
+							}
+							oldRunsGame = parseInt(oldRSG);
+							updRunsInning = oldRunsInning + runsScoredInning;
+							updRunsGame = oldRunsGame + runsScoredInning;
+							document.getElementById("Hinn9").innerHTML = updRunsInning;
+							document.getElementById("HinnR").innerHTML = updRunsGame;
+							break;
+						case 10:
+							var oldRSG = document.getElementById("HinnR").innerHTML;
+							var oldRSI = document.getElementById("HinnX").innerHTML;
+							if ( oldRSI === "" )	{
+								oldRunsInning = 0;
+							} else	{
+								oldRunsInning = parseInt(oldRSI);
+							}
+							oldRunsGame = parseInt(oldRSG);
+							updRunsInning = oldRunsInning + runsScoredInning;
+							updRunsGame = oldRunsGame + runsScoredInning;
+							document.getElementById("HinnX").innerHTML = updRunsInning;
+							document.getElementById("HinnR").innerHTML = updRunsGame;
+							break;
+						}
+				}	else	{
+					switch (Inning)	{
+						case 1:
+							var oldRSG = document.getElementById("VinnR").innerHTML;
+							var oldRSI = document.getElementById("Vinn1").innerHTML;
+							if ( oldRSI === "" )	{
+								oldRunsInning = 0;
+							} else	{
+								oldRunsInning = parseInt(oldRSI);
+							}
+							oldRunsGame = parseInt(oldRSG);
+							updRunsInning = oldRunsInning + runsScoredInning;
+							updRunsGame = oldRunsGame + runsScoredInning;
+							document.getElementById("Vinn1").innerHTML = updRunsInning;
+							document.getElementById("VinnR").innerHTML = updRunsGame;
+							break;
+						case 2:
+							var oldRSG = document.getElementById("VinnR").innerHTML;
+							var oldRSI = document.getElementById("Vinn2").innerHTML;
+							if ( oldRSI === "" )	{
+								oldRunsInning = 0;
+							} else	{
+								oldRunsInning = parseInt(oldRSI);
+							}
+							oldRunsGame = parseInt(oldRSG);
+							updRunsInning = oldRunsInning + runsScoredInning;
+							updRunsGame = oldRunsGame + runsScoredInning;
+							document.getElementById("Vinn2").innerHTML = updRunsInning;
+							document.getElementById("VinnR").innerHTML = updRunsGame;
+							break;
+						case 3:		
+							var oldRSG = document.getElementById("VinnR").innerHTML;
+							var oldRSI = document.getElementById("Vinn3").innerHTML;
+							if ( oldRSI === "" )	{
+								oldRunsInning = 0;
+							} else	{
+								oldRunsInning = parseInt(oldRSI);
+							}
+							oldRunsGame = parseInt(oldRSG);
+							updRunsInning = oldRunsInning + runsScoredInning;
+							updRunsGame = oldRunsGame + runsScoredInning;
+							document.getElementById("Vinn3").innerHTML = updRunsInning;
+							document.getElementById("VinnR").innerHTML = updRunsGame;
+							break;
+
+						case 4:
+							var oldRSG = document.getElementById("VinnR").innerHTML;
+							var oldRSI = document.getElementById("Vinn4").innerHTML;
+							if ( oldRSI === "" )	{
+								oldRunsInning = 0;
+							} else	{
+								oldRunsInning = parseInt(oldRSI);
+							}
+							oldRunsGame = parseInt(oldRSG);
+							updRunsInning = oldRunsInning + runsScoredInning;
+							updRunsGame = oldRunsGame + runsScoredInning;
+							document.getElementById("Vinn4").innerHTML = updRunsInning;
+							document.getElementById("VinnR").innerHTML = updRunsGame;
+							break;
+						case 5:
+							var oldRSG = document.getElementById("VinnR").innerHTML;
+							var oldRSI = document.getElementById("Vinn5").innerHTML;
+							if ( oldRSI === "" )	{
+								oldRunsInning = 0;
+							} else	{
+								oldRunsInning = parseInt(oldRSI);
+							}
+							oldRunsGame = parseInt(oldRSG);
+							updRunsInning = oldRunsInning + runsScoredInning;
+							updRunsGame = oldRunsGame + runsScoredInning;
+							document.getElementById("Vinn5").innerHTML = updRunsInning;
+							document.getElementById("VinnR").innerHTML = updRunsGame;
+							break;
+
+						case 6:
+							var oldRSG = document.getElementById("VinnR").innerHTML;
+							var oldRSI = document.getElementById("Vinn6").innerHTML;
+							if ( oldRSI === "" )	{
+								oldRunsInning = 0;
+							} else	{
+								oldRunsInning = parseInt(oldRSI);
+							}
+							oldRunsGame = parseInt(oldRSG);
+							updRunsInning = oldRunsInning + runsScoredInning;
+							updRunsGame = oldRunsGame + runsScoredInning;
+							document.getElementById("Vinn6").innerHTML = updRunsInning;
+							document.getElementById("VinnR").innerHTML = updRunsGame;
+							break;
+
+						case 7:
+							var oldRSG = document.getElementById("VinnR").innerHTML;
+							var oldRSI = document.getElementById("Vinn7").innerHTML;
+							if ( oldRSI === "" )	{
+								oldRunsInning = 0;
+							} else	{
+								oldRunsInning = parseInt(oldRSI);
+							}
+							oldRunsGame = parseInt(oldRSG);
+							updRunsInning = oldRunsInning + runsScoredInning;
+							updRunsGame = oldRunsGame + runsScoredInning;
+							document.getElementById("Vinn7").innerHTML = updRunsInning;
+							document.getElementById("VinnR").innerHTML = updRunsGame;
+							break;
+
+						case 8:
+							var oldRSG = document.getElementById("VinnR").innerHTML;
+							var oldRSI = document.getElementById("Vinn8").innerHTML;
+							if ( oldRSI === "" )	{
+								oldRunsInning = 0;
+							} else	{
+								oldRunsInning = parseInt(oldRSI);
+							}
+							oldRunsGame = parseInt(oldRSG);
+							updRunsInning = oldRunsInning + runsScoredInning;
+							updRunsGame = oldRunsGame + runsScoredInning;
+							document.getElementById("Vinn8").innerHTML = updRunsInning;
+							document.getElementById("VinnR").innerHTML = updRunsGame;
+							break;
+
+						case 9:
+							var oldRSG = document.getElementById("VinnR").innerHTML;
+							var oldRSI = document.getElementById("Vinn9").innerHTML;
+							if ( oldRSI === "" )	{
+								oldRunsInning = 0;
+							} else	{
+								oldRunsInning = parseInt(oldRSI);
+							}
+							oldRunsGame = parseInt(oldRSG);
+							updRunsInning = oldRunsInning + runsScoredInning;
+							updRunsGame = oldRunsGame + runsScoredInning;
+							document.getElementById("Vinn9").innerHTML = updRunsInning;
+							document.getElementById("VinnR").innerHTML = updRunsGame;
+							break;
+						case 10:
+							var oldRSG = document.getElementById("VinnR").innerHTML;
+							var oldRSI = document.getElementById("VinnX").innerHTML;
+							if ( oldRSI === "" )	{
+								oldRunsInning = 0;
+							} else	{
+								oldRunsInning = parseInt(oldRSI);
+							}
+							oldRunsGame = parseInt(oldRSG);
+							updRunsInning = oldRunsInning + runsScoredInning;
+							updRunsGame = oldRunsGame + runsScoredInning;
+							document.getElementById("VinnX").innerHTML = updRunsInning;
+							document.getElementById("VinnR").innerHTML = updRunsGame;
+							break;
+						}
+				}
+
+			}
+
+			function nextDragonsBatter()	{
+				var z = document.getElementById("dragonslineupnumber").value;
+				var DragonsBatter = parseInt(z);
+				DragonsBatter++;
+				if ( DragonsBatter > 9 ) {
+					DragonsBatter = 1;
+				}
+				document.getElementById("dragonslineupnumber").value = DragonsBatter;
+				switch (DragonsBatter)	{
+					case 1:
+						document.getElementById("hpos9").style.backgroundColor = "#006400";
+						document.getElementById("hpos1").style.backgroundColor = "red";
+						break;
+					case 2:
+						document.getElementById("hpos1").style.backgroundColor = "#006400";
+						document.getElementById("hpos2").style.backgroundColor = "red";
+						break;
+					case 3:
+						document.getElementById("hpos2").style.backgroundColor = "#006400";
+						document.getElementById("hpos3").style.backgroundColor = "red";
+						break;
+					case 4:
+						document.getElementById("hpos3").style.backgroundColor = "#006400";
+						document.getElementById("hpos4").style.backgroundColor = "red";
+						break;
+					case 5:
+						document.getElementById("hpos4").style.backgroundColor = "#006400";
+						document.getElementById("hpos5").style.backgroundColor = "red";
+						break;
+					case 6:
+						document.getElementById("hpos5").style.backgroundColor = "#006400";
+						document.getElementById("hpos6").style.backgroundColor = "red";
+						break;
+					case 7:
+						document.getElementById("hpos6").style.backgroundColor = "#006400";
+						document.getElementById("hpos7").style.backgroundColor = "red";
+						break;
+					case 8:
+						document.getElementById("hpos7").style.backgroundColor = "#006400";
+						document.getElementById("hpos8").style.backgroundColor = "red";
+						break;
+					case 9:
+						document.getElementById("hpos8").style.backgroundColor = "#006400";
+						document.getElementById("hpos9").style.backgroundColor = "red";
+						break;
+				}
+			}
+
+			function nextDinosaursBatter()	{
+				var z = document.getElementById("dinosaurslineupnumber").value;
+				var dinosaursBatter = parseInt(z);
+				dinosaursBatter++;
+				if ( dinosaursBatter > 9 ) {
+					dinosaursBatter = 1;
+				}
+				document.getElementById("dinosaurslineupnumber").value = dinosaursBatter;
+				switch (dinosaursBatter)	{
+					case 1:
+						document.getElementById("vpos9").style.backgroundColor = "#006400";
+						document.getElementById("vpos1").style.backgroundColor = "red";
+						break;
+					case 2:
+						document.getElementById("vpos1").style.backgroundColor = "#006400";
+						document.getElementById("vpos2").style.backgroundColor = "red";
+						break;
+					case 3:
+						document.getElementById("vpos2").style.backgroundColor = "#006400";
+						document.getElementById("vpos3").style.backgroundColor = "red";
+						break;
+					case 4:
+						document.getElementById("vpos3").style.backgroundColor = "#006400";
+						document.getElementById("vpos4").style.backgroundColor = "red";
+						break;
+					case 5:
+						document.getElementById("vpos4").style.backgroundColor = "#006400";
+						document.getElementById("vpos5").style.backgroundColor = "red";
+						break;
+					case 6:
+						document.getElementById("vpos5").style.backgroundColor = "#006400";
+						document.getElementById("vpos6").style.backgroundColor = "red";
+						break;
+					case 7:
+						document.getElementById("vpos6").style.backgroundColor = "#006400";
+						document.getElementById("vpos7").style.backgroundColor = "red";
+						break;
+					case 8:
+						document.getElementById("vpos7").style.backgroundColor = "#006400";
+						document.getElementById("vpos8").style.backgroundColor = "red";
+						break;
+					case 9:
+						document.getElementById("vpos8").style.backgroundColor = "#006400";
+						document.getElementById("vpos9").style.backgroundColor = "red";
+						break;
+				}
+			}
+
+			function changeTeam()	{
+				var whosbatting = document.getElementById("teamatbat").innerText;
+				var ww = document.getElementById("inningnumber").innerText;
+				var Inning = parseInt(ww);
+				nowbatting = "Dinosaurs";
+				if ( whosbatting == "Dragons" )	{
+					switch(Inning) {
+						case 1:
+							var x = document.getElementById("runsInning").value;
+							if ( x == 0 )	{
+								document.getElementById("Hinn1").innerHTML = "0";
+							}
+							break;
+						case 2:
+							var x = document.getElementById("runsInning").value;
+							if ( x == 0 )	{
+								document.getElementById("Hinn2").innerHTML = "0";
+							}
+							break;
+						case 3:
+							var x = document.getElementById("runsInning").value;
+							if ( x == 0 )	{
+								document.getElementById("Hinn3").innerHTML = "0";
+							}
+							break;		
+						case 4:
+							var x = document.getElementById("runsInning").value;
+							if ( x == 0 )	{
+								document.getElementById("Hinn4").innerHTML = "0";
+							}
+							break;
+						case 5:
+							var x = document.getElementById("runsInning").value;
+							if ( x == 0 )	{
+								document.getElementById("Hinn5").innerHTML = "0";
+							}
+							break;
+						case 6:
+							var x = document.getElementById("runsInning").value;
+							if ( x == 0 )	{
+								document.getElementById("Hinn6").innerHTML = "0";
+							}
+							break;
+						case 7:
+							var x = document.getElementById("runsInning").value;
+							if ( x == 0 )	{
+								document.getElementById("Hinn7").innerHTML = "0";
+							}
+							break;
+						case 8:
+							var x = document.getElementById("runsInning").value;
+							if ( x == 0 )	{
+								document.getElementById("Hinn8").innerHTML = "0";
+							}
+							break;
+						case 9:
+							var x = document.getElementById("runsInning").value;
+							if ( x == 0 )	{
+								document.getElementById("Hinn9").innerHTML = "0";
+							}
+							<!-- Check to see who is winning after regulation -->
+							var DragonsRuns = document.getElementById("HinnR").innerHTML;
+							var DragonsScore = parseInt(DragonsRuns);
+							var dinosaursRuns = document.getElementById("VinnR").innerHTML;
+							var dinosaursScore = parseInt(dinosaursRuns);
+							if ( DragonsScore > DinosaursScore )	{
+								alert("Dragons Win!");
+								Inning--;
+								nowbatting="Game Over";
+							} else if ( DragonsScore < DinosaursScore )	{
+								alert("Dinosaurs Win!");
+								Inning--;
+								nowbatting="Game Over";
+							} else	{
+								alert("We go to Extra Innings");
+							}
+							break;
+						case 10:
+							var x = document.getElementById("runsInning").value;
+							if ( x == 0 )	{
+								document.getElementById("HinnX").innerHTML = "0";
+							}
+							<!-- Check to see who is winning after regulation -->
+							var DragonsRuns = document.getElementById("HinnR").innerHTML;
+							var DragonsScore = parseInt(DragonsRuns);
+							var DinosaursRuns = document.getElementById("VinnR").innerHTML;
+							var DinosaursScore = parseInt(dinosaursRuns);
+							if ( DragonsScore > DinosaursScore )	{
+								alert("Dragons Win!");
+								Inning--;
+								nowbatting="Game Over";
+							} else if ( DragonsScore < DinosaursScore )	{
+								alert("Dinosaurs Win!");
+								Inning--;
+								nowbatting="Game Over";
+							} else	{
+								alert("We go to more Extra Innings");
+							}
+
+					}
+					document.getElementById("teamatbat").innerText = nowbatting;								Inning++;
+					document.getElementById("inningnumber").innerText = Inning;
+					if ( Inning > 9 )	{
+						alert("Extra Innings!");
+					}
+				}	else	{     <!-- Now batting = dinosaurs  -->
+					switch(Inning) {
+						case 1:
+							var y = document.getElementById("runsInning").value;
+							if ( y == 0 )	{
+								document.getElementById("Vinn1").innerHTML = "0";
+							}
+							break;
+						case 2:
+							var y = document.getElementById("runsInning").value;
+							if ( y == 0 )	{
+								document.getElementById("Vinn2").innerHTML = "0";
+							}
+							break;
+						case 3:
+							var y = document.getElementById("runsInning").value;
+							if ( y == 0 )	{
+								document.getElementById("Vinn3").innerHTML = "0";
+							}
+							break;		
+						case 4:
+							var y = document.getElementById("runsInning").value;
+							if ( y == 0 )	{
+								document.getElementById("Vinn4").innerHTML = "0";
+							}
+							break;
+						case 5:
+							var y = document.getElementById("runsInning").value;
+							if ( y == 0 )	{
+								document.getElementById("Vinn5").innerHTML = "0";
+							}
+							break;
+						case 6:
+							var y = document.getElementById("runsInning").value;
+							if ( y == 0 )	{
+								document.getElementById("Vinn6").innerHTML = "0";
+							}
+							break;
+						case 7:
+							var y = document.getElementById("runsInning").value;
+							if ( y == 0 )	{
+								document.getElementById("Vinn7").innerHTML = "0";
+							}
+							break;
+						case 8:
+							var y = document.getElementById("runsInning").value;
+							if ( y == 0 )	{
+								document.getElementById("Vinn8").innerHTML = "0";
+							}
+							break;
+						case 9:
+							var y = document.getElementById("runsInning").value;
+							if ( y == 0 )	{
+								document.getElementById("Vinn9").innerHTML = "0";
+							}
+							var DragonsRuns = document.getElementById("HinnR").innerHTML;
+							var DragonsScore = parseInt(DragonsRuns);
+							var DinosaursRuns = document.getElementById("VinnR").innerHTML;
+							var DinosaursScore = parseInt(DinosaursRuns);
+							if ( DragonsScore > DinosaursScore )	{
+								alert("Dragons Win!");
+								document.getElementById("Hinn9").innerHTML = "X";
+								Inning--;
+								nowbatting="Game Over";
+							} 
+							break;
+						case 10:
+							var y = document.getElementById("runsInning").value;
+							if ( y == 0 )	{
+								document.getElementById("VinnX").innerHTML = "0";
+							}
+							var DragonsRuns = document.getElementById("HinnR").innerHTML;
+							var DragonsScore = parseInt(DragonsRuns);
+							var DinosaursRuns = document.getElementById("VinnR").innerHTML;
+							var DinosaursScore = parseInt(DinosaursRuns);
+							if ( DragonsScore > DinosaursScore )	{
+								alert("Dragons Win!");
+								document.getElementById("HinnX").innerHTML = "X";
+								Inning--;
+								nowbatting="Game Over";
+							} 
+
+					}
+					nowbatting = "Dragons";
+					document.getElementById("teamatbat").innerText = nowbatting;
+				}
+
+				document.getElementById("battername").innerText = "";
+				document.getElementById("position").innerText = "";
+				document.getElementById("batterrating").value = "";					
+				document.getElementById("HRrating").value = "";
+				document.getElementById("triplerating").value = "";
+				document.getElementById("doublerating").value = "";
+				document.getElementById("runsInning").value = 0;
+				document.getElementById("pitch").value = "";
+				document.getElementById("pitchresult").value = "";
+				document.getElementById("displaypitchresult").innerText = "";
+				document.getElementById("runner1B").value = "";
+				document.getElementById("runner2B").value = "";
+				document.getElementById("runner3B").value = "";
+				document.getElementById("return1B").value = "";
+				document.getElementById("return2B").value = "";
+				document.getElementById("return3B").value = "";
+				document.getElementById("returnRuns").value = "";
+				document.getElementById("Runs").value = "";
+				document.getElementById("fromPHP").value = "";
+				document.getElementById("diamond1B").style.backgroundColor = "white";
+				document.getElementById("diamond2B").style.backgroundColor = "white";
+				document.getElementById("diamond3B").style.backgroundColor = "white";
+				document.getElementById("diamondHP").value = "";
+				document.getElementById("batterphoto").innerHTML = "";
+				document.getElementById("battingavg").innerText = "";
+				document.getElementById("homersdisplay").innerText = "";
+
+				document.getElementById("rbisdisplay").innerText = "";
+
+
+			}
+
+			function HomeRunSequence()	{
+				R1 = document.getElementById("diamond1B");
+				R2 = document.getElementById("diamond2B");
+				R3 = document.getElementById("diamond3B");
+				HP = document.getElementById("diamondHP");
+
+				setTimeout(function() { R1.style.backgroundColor = "black"; }, 500);
+				setTimeout(function() { R1.style.backgroundColor = "white"; }, 1000);
+				setTimeout(function() { R1.style.backgroundColor = "black"; }, 1500);
+				setTimeout(function() { R1.style.backgroundColor = "white"; }, 2000);
+				setTimeout(function() { R1.style.backgroundColor = "black"; }, 2500);
+				setTimeout(function() { R1.style.backgroundColor = "white"; }, 3000);
+				setTimeout(function() { R1.style.backgroundColor = "black"; }, 3500);
+				setTimeout(function() { R1.style.backgroundColor = "white"; }, 4000);
+				setTimeout(function() { R1.style.backgroundColor = "black"; }, 4500);
+				setTimeout(function() { R1.style.backgroundColor = "white"; }, 5000);
+
+				setTimeout(function() { R2.style.backgroundColor = "black"; }, 500);
+				setTimeout(function() { R2.style.backgroundColor = "white"; }, 1000);
+				setTimeout(function() { R2.style.backgroundColor = "black"; }, 1500);
+				setTimeout(function() { R2.style.backgroundColor = "white"; }, 2000);
+				setTimeout(function() { R2.style.backgroundColor = "black"; }, 2500);
+				setTimeout(function() { R2.style.backgroundColor = "white"; }, 3000);
+				setTimeout(function() { R2.style.backgroundColor = "black"; }, 3500);
+				setTimeout(function() { R2.style.backgroundColor = "white"; }, 4000);
+				setTimeout(function() { R2.style.backgroundColor = "black"; }, 4500);
+				setTimeout(function() { R2.style.backgroundColor = "white"; }, 5000);
+
+				setTimeout(function() { R3.style.backgroundColor = "black"; }, 500);
+				setTimeout(function() { R3.style.backgroundColor = "white"; }, 1000);
+				setTimeout(function() { R3.style.backgroundColor = "black"; }, 1500);
+				setTimeout(function() { R3.style.backgroundColor = "white"; }, 2000);
+				setTimeout(function() { R3.style.backgroundColor = "black"; }, 2500);
+				setTimeout(function() { R3.style.backgroundColor = "white"; }, 3000);
+				setTimeout(function() { R3.style.backgroundColor = "black"; }, 3500);
+				setTimeout(function() { R3.style.backgroundColor = "white"; }, 4000);
+				setTimeout(function() { R3.style.backgroundColor = "black"; }, 4500);
+				setTimeout(function() { R3.style.backgroundColor = "white"; }, 5000);
+
+				setTimeout(function() { HP.style.backgroundColor = "black"; }, 500);
+				setTimeout(function() { HP.style.backgroundColor = "white"; }, 1000);
+				setTimeout(function() { HP.style.backgroundColor = "black"; }, 1500);
+				setTimeout(function() { HP.style.backgroundColor = "white"; }, 2000);
+				setTimeout(function() { HP.style.backgroundColor = "black"; }, 2500);
+				setTimeout(function() { HP.style.backgroundColor = "white"; }, 3000);
+				setTimeout(function() { HP.style.backgroundColor = "black"; }, 3500);
+				setTimeout(function() { HP.style.backgroundColor = "white"; }, 4000);
+				setTimeout(function() { HP.style.backgroundColor = "black"; }, 4500);
+				setTimeout(function() { HP.style.backgroundColor = "white"; }, 5000);
+		
+				updateTheDiamond();
+			}
+
+
+		</script>
+	
+	</body>
+</html>
